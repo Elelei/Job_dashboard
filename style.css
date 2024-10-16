@@ -30,8 +30,10 @@ nav{
   background: #f6f6f2;
 }
 .navbar{
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  left: 0;
+  
 }
 
 .logo{
