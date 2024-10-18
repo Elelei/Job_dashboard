@@ -68,6 +68,11 @@ nav{
   li{
     padding-bottom: 2rem;
   }
+  .active {
+    background-color: #388087; /* or any highlight color */
+    color: white;
+  }
+
   li a{
     display: flex;
     align-items: center;
@@ -224,4 +229,9 @@ h1{
 .job_card:active{
   border: 2px solid blueviolet;
   transition: 0.4s;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: white;
 }
