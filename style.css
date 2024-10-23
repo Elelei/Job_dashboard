@@ -92,7 +92,7 @@ li a {
 
 li a:hover {
     background-color: #2e3b3c; /* Change hover color to secondary dark teal */
-    color: #fff;
+    color: #388087;
 }
 
 .nav-item {
@@ -113,7 +113,7 @@ nav i {
 }
 
 .logout {
-    position: absolute;
+    position: relative;
     bottom: 20px;
 }
 
@@ -247,7 +247,7 @@ h1 {
     align-items: flex-end;
     margin-top: 10px;
     text-align: right;
-    color:  #d0d0d0;
+    color:  #e0e0e0;
     margin-left: 10px;
 }
 
@@ -268,3 +268,61 @@ h1 {
 }
 
 
+footer {
+  background: #2a4b4e; /* Match the navbar gradient */
+  color: #e0e0e0; /* Text color */
+  padding: 20px 0;
+  font-size: 14px;
+  position: relative; /* Change from absolute to relative */
+  width: calc(100% - 70px); /* Ensure it respects the navbar width */
+  left: 70px; /* Align with main content area */
+  bottom: 0; /* Stick to the bottom of the content */
+  z-index: 10; /* Ensure it’s above other content */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 5px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #2a4b4e; /* Optional border at the top */
+  padding-top: 10px;
+}
+
+/* Ensure footer is below the main content */
+.main {
+  margin-bottom: 80px; /* Adjust this based on footer height */
+}
