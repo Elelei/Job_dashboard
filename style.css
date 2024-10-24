@@ -122,6 +122,8 @@ nav i {
     width: calc(100% - 70px);
     margin-left: 70px;
     transition: margin-left 0.3s ease, width 0.3s ease;
+    padding: 20px;
+    z-index: 900;
 }
 
 .main-top {
@@ -142,6 +144,7 @@ nav i {
 nav:hover ~ .main {
     margin-left: 280px;
     width: calc(100% - 280px);
+    transition: margin-left 0.3s ease, width 0.3s ease;
 }
 
 h1 {
@@ -269,35 +272,40 @@ h1 {
 
 
 footer {
-  background: #2a4b4e; /* Match the navbar gradient */
-  color: #e0e0e0; /* Text color */
-  padding: 20px 0;
-  font-size: 14px;
-  position: relative; /* Change from absolute to relative */
-  width: calc(100% - 70px); /* Ensure it respects the navbar width */
-  left: 70px; /* Align with main content area */
-  bottom: 0; /* Stick to the bottom of the content */
-  z-index: 10; /* Ensure it’s above other content */
+  background: linear-gradient(to bottom, #233738, #2e3b3c); /* Darker, blended gradient */
+  color: #e0e0e0; /* Softer white text */
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center the contents */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align items to the center */
+  margin-left: 70px; /* Offset to align with the main section */
+  width: calc(100% - 70px); /* Match main section width */
+  transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth transition */
+  z-index: 950; 
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Allow wrapping for responsive layout */
+  justify-content: space-between;
   padding: 20px;
+  width: 100%; /* Full width to match the container */
 }
 
 .footer-section {
   flex: 1;
-  margin: 0 10px;
+  margin: 10px;
+  max-width: 300px; /* Limit max width for better spacing */
 }
 
 .footer-section h3 {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px; /* Slightly larger font */
+  color: #388087; /* Use highlight color for section headers */
 }
 
-.footer-section p,
-.footer-section ul {
+.footer-section p, .footer-section ul {
   margin: 5px 0;
 }
 
@@ -307,22 +315,45 @@ footer {
 }
 
 .footer-section ul li a {
-  color: #e0e0e0;
+  color: #e0e0e0; /* Match the main section text color */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  text-decoration: underline; /* Underline on hover */
+  color: #388087; /* Use highlight color on hover */
+  text-decoration: underline;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
-  border-top: 1px solid #2a4b4e; /* Optional border at the top */
+  border-top: 1px solid #388087; /* Subtle border at the top */
   padding-top: 10px;
+  width: 100%;
 }
 
-/* Ensure footer is below the main content */
-.main {
-  margin-bottom: 80px; /* Adjust this based on footer height */
+/* Social Media Icons */
+.social-media {
+  display: flex;
+  list-style: none;
+  padding: 0;
 }
+
+.social-media li {
+  margin: 0 10px;
+}
+
+.social-media li a {
+  color: #e0e0e0;
+  font-size: 20px;
+}
+
+/* Ensure footer behaves like main section when navbar expands */
+nav:hover ~ .main,
+nav:hover ~ footer {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+
